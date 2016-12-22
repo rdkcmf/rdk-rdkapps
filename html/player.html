@@ -1,0 +1,240 @@
+<!--
+ If not stated otherwise in this file or this component's Licenses.txt file the
+ following copyright and licenses apply:
+
+ Copyright 2016 RDK Management
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+<html>
+  <head>
+    <title>Demo: HTML5 video controls with JavaScript</title>
+    <style media="screen" type="text/css">
+      div.container {
+        background-color: #ddd;
+        margin: 0 0 20px;
+        padding: 1px 1px 47px;
+        width: 950px;
+      }
+      p {
+        font: 14px/1.3 Verdana, sans-serif;
+      }
+      p.back {
+        bottom: 20px;
+        left: 10px;
+        position: absolute;
+      }
+      ul, li, p {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+        overflow: hidden;
+        padding: 10px 0;
+        width: 100%;
+      }
+      li {
+        float: left;
+      }
+      li.play_pause {
+        padding-left: 10px;
+        width: 50px;
+      }
+      li.time {
+        text-align: center;
+        width: 160px;
+      }
+      li.volume {
+        padding-right: 10px;
+        width: 120px;
+      }
+      .control {
+        color: red;
+        cursor: pointer;
+      }
+
+      div.spinner {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        display: inline-block;
+      }
+
+      div.spinner div {
+        width: 9%;
+        height: 26%;
+        background: #0066CC;
+        position: absolute;
+        left: 44.5%;
+        top: 37%;
+        opacity: 0;
+        -webkit-animation: fade 1s linear infinite;
+        -webkit-border-radius: 21px;
+      }
+
+      div.spinner div.bar1 {
+        -webkit-transform: rotate(0deg) translate(0, -142%);
+        -webkit-animation-delay: 0s;
+      }
+      div.spinner div.bar2 {
+        -webkit-transform: rotate(30deg) translate(0, -142%);
+        -webkit-animation-delay: -0.9167s;
+      }
+      div.spinner div.bar3 {
+        -webkit-transform: rotate(60deg) translate(0, -142%);
+        -webkit-animation-delay: -0.833s;
+      }
+      div.spinner div.bar4 {
+        -webkit-transform: rotate(90deg) translate(0, -142%);
+        -webkit-animation-delay: -0.75s;
+      }
+      div.spinner div.bar5 {
+        -webkit-transform: rotate(120deg) translate(0, -142%);
+        -webkit-animation-delay: -0.667s;
+      }
+      div.spinner div.bar6 {
+        -webkit-transform: rotate(150deg) translate(0, -142%);
+        -webkit-animation-delay: -0.5833s;
+      }
+      div.spinner div.bar7 {
+        -webkit-transform: rotate(180deg) translate(0, -142%);
+        -webkit-animation-delay: -0.5s;
+      }
+      div.spinner div.bar8 {
+        -webkit-transform: rotate(210deg) translate(0, -142%);
+        -webkit-animation-delay: -0.41667s;
+      }
+      div.spinner div.bar9 {
+        -webkit-transform: rotate(240deg) translate(0, -142%);
+        -webkit-animation-delay: -0.333s;
+      }
+      div.spinner div.bar10 {
+        -webkit-transform: rotate(270deg) translate(0, -142%);
+        -webkit-animation-delay: -0.25s;
+      }
+      div.spinner div.bar11 {
+        -webkit-transform: rotate(300deg) translate(0, -142%);
+        -webkit-animation-delay: -0.1667s;
+      }
+      div.spinner div.bar12 {
+        -webkit-transform: rotate(330deg) translate(0, -142%);
+        -webkit-animation-delay: -0.0833s;
+      }
+
+      @-webkit-keyframes fade {
+      from {
+        opacity: 1;
+      }
+      to {
+        opacity: 0.15;
+      }
+      }
+
+    </style>
+    <!-- Disabled the Video Controllers
+    <script src="video.js" type="text/javascript"></script>
+    -->
+    <script type="text/javascript">
+      function loading() {
+        var video = document.getElementById('video');
+        video.addEventListener("canplay", function() {
+          document.getElementById('spinner').style.visibility = "hidden";
+        }, false);
+      }
+    </script>
+  </head>
+  <body style="padding:25px; margin: 10px;" onload="loading()">
+    <div style="background-color: #CCFFCC ; right:32px; position:fixed; padding: 5px; border-radius: 20px ;" id="guideLable"  >
+      <p>
+        Press <span style="color:red;font-weight:bold; ">EXIT</span> to go Back
+      </p>
+    </div>
+    <div class="container">
+      <div class="spinner" style="left:460px; top:200px;" id="spinner">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+        <div class="bar4"></div>
+        <div class="bar5"></div>
+        <div class="bar6"></div>
+        <div class="bar7"></div>
+        <div class="bar8"></div>
+        <div class="bar9"></div>
+        <div class="bar10"></div>
+        <div class="bar11"></div>
+        <div class="bar12"></div>
+      </div>
+
+      <table align="center" border="1">
+        <tr>
+          <td>
+          <video id="video" width="620" height="360" autoplay>
+            <source src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4" />
+            <p>
+              Cannot load video.
+            </p>
+          </video></td>
+        </tr>
+      </table>
+
+      <!-- Disabled the Video Controllers 
+      <hr />
+      <ul class="controls">
+
+        <li class="play_pause">
+          <p class="control" id="play">
+            Play
+          </p>
+        </li>
+        <li class="play_pause">
+          <p class="control" id="seekb">
+            [-15s]
+          </p>
+        </li>
+        <li class="play_pause">
+          <p class="control" id="seekf">
+            [+15s]
+          </p>
+        </li>
+        <li class="play_pause">
+          <p class="control" id="scale">
+            Scale
+          </p>
+        </li>
+        <li class="play_pause">
+          <p class="control" id="rew">
+            Rewind
+          </p>
+        </li>
+        <li class="play_pause">
+          <p class="control" id="ffw">
+            F.Fwd
+          </p>
+        </li>
+        <progress id="determinateProgressBar" value="0" max="60"></progress>
+        <li class="time">
+          <p>
+            <span id="timer">1</span>' of <span id="duration">0</span>'
+          </p>
+        </li>
+        <li class="volume">
+          <p>
+            Vol: <span class="control" id="v-dn" title="Volume down">[-]</span> / <span class="control" id="v-up" title="Volume up">[+]</span><span id="volume">10</span>
+          </p>
+        </li>
+      </ul>
+      -->
+    </div>
+  </body>
+</html>
