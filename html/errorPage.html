@@ -1,0 +1,68 @@
+<!--
+ If not stated otherwise in this file or this component's Licenses.txt file the
+ following copyright and licenses apply:
+
+ Copyright 2016 RDK Management
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>error</title>
+
+        <style type="text/css">
+body {
+  background: #333333 url("data:image/jpeg;base64,/9j/4QAYRXhpZgAASUkqAAgAAAAAAAAAAAAAAP/sABFEdWNreQABAAQAAABkAAD/4QMtaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/PiA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjAtYzA2MSA2NC4xNDA5NDksIDIwMTAvMTIvMDctMTA6NTc6MDEgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDUzUuMSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NjREQTQxQTJBREVFMTFFMzk0MzQ5NTI4RTM5QjhBMDAiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NjREQTQxQTNBREVFMTFFMzk0MzQ5NTI4RTM5QjhBMDAiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo2NERBNDFBMEFERUUxMUUzOTQzNDk1MjhFMzlCOEEwMCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo2NERBNDFBMUFERUUxMUUzOTQzNDk1MjhFMzlCOEEwMCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pv/uAA5BZG9iZQBkwAAAAAH/2wCEAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQECAgICAgICAgICAgMDAwMDAwMDAwMBAQEBAQEBAgEBAgICAQICAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDA//AABEIACgAKAMBEQACEQEDEQH/xABgAAADAQEAAAAAAAAAAAAAAAAAAQIDCgEBAAAAAAAAAAAAAAAAAAAAABABAQADAAICAgEEAwAAAAAAAQIREgMhEwAxIjJhQXFCMyNDBBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8A5p7JydPXOehVsOlVv04kTPSXz62ZvOqjjPkz8B+vldykxe8HPHqqIjlPWUhl1N4mcea2mpyT9gF9DUL4ynmjEnXSaCn8uXJS16+KSc4z5+Bn0Yn1Zl9PCjH7VXO+OuufXTMlT4Nsff3jAgcudHVqq59BOeJmmq6BZXvqL62ZlZZrZSAA+gBsF8Sted9SerqzE5pzHSYu+Vu3PBPmXbXFZzkDLAw1AR2u4u8vqPadI5PQKHpURS0FCSvkX8QLOI9Iqmro485FeLx6jz1qeVUPWz7rC4X78IoFCxrXStmIek/9/PlyAu4SYetx38lfXl1M+EDfUzXSIn2VXIl1mqSusFM1ymosz+9BVC5oowAxddGmw4VLis/8VtBHPn2isHeenOj8v7znJKBb/mY6zzxJ+VNX2Oh/rmO3nGP6eL2yH8gGJu56m03VZ6dfXhI4u9sagBOYpSRnXGcr8CZMr5mGd/az0leayvN6+rpxxNfSAKweUB+Ad7eStVMTWtrr2pLwlQdI5+R5wg5LD+APgKejXKbia1c+qNOc71mQbpg5x0at+2QvwTWM0DvoXBM9IH2euj3VTf1zjBp39h1ihR/XOXKPwAmecb2zg62mR63zg6db6SAdTp0rKWgUSuV1+BfOs8ubHrqpcSDXBlniyTq8wu8KgzE6o4wfAGR6LzWjJxtpOn31z25u23UCB8eQzkwZfgZ+raJhnnxXWcTpT155ajM17c9Q5uc7zq05fOArWedYnKzo3XS9bqP/ADlecXJKZQH9PtyVhQd9H6J6NVZt0jiVUw3RB+L0efTnzrcanyH0LgCGi6bYqucda2acdd5X0evJKYv8SR/yw+WwBzKq0uHp05S3On+oXm0nSr7Tz1pKqitgTGVQ/9k=");
+  margin: 0;
+}
+#container {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  margin-top: -150px;
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2hpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYxIDY0LjE0MDk0OSwgMjAxMC8xMi8wNy0xMDo1NzowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpDRTQzMzI1QUY5MjA2ODExOTJCMEVBMTRDMDI0MkQ3OCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpCNTA2Njk1MkFEOTQxMUUzOTQzNDk1MjhFMzlCOEEwMCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpCNTA2Njk1MUFEOTQxMUUzOTQzNDk1MjhFMzlCOEEwMCIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1LjEgTWFjaW50b3NoIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NzE3OTM5QTMxMTIyNjgxMTkyQjBFQTE0QzAyNDJENzgiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6Q0U0MzMyNUFGOTIwNjgxMTkyQjBFQTE0QzAyNDJENzgiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5PSmBAAAADg0lEQVR42uSbi3HaQBCGDyYFKB3AuADJFVhUYFyBRQXBFTiuwLgC5AoMFaAODAVkgiuIKoDsZhaPLOuk093eXhJ25sYzGLj79O/u7T0YHI9HdU42VGdmZwf8xfULfgyNn9mIWpPtqfW2i8NBFrgFLoV2BS2hZmIFtC20HbQVtJJ7YAPXpFVROIKWQbvtAdhlCL2GlnMpzAGMat5DmxK0D0Oln6At6qqLAQMows0JVsoQ9oHA5YABFuNz2ZKEfBvG+Qz/egcG2EdS1kYdjMU3GrCixBZTONh83x0A516AyYVfaJB9LSdF2rL6i2WyywF6xgpMsBvLAWGmvTF4H/bxahkmxtCdwI6waF97zKcZ5QblC9oE+NUBFguJSc/PuMyTndDDDtilYxHha17WegiMObNSGD44pUTiXM31eG9Ccew6V09A6a2xwhS3S6annvYEdrXWsetc+pHRHftAxFx9gmhzI2CqjTPGuIqFFT7ZPXlqp8LctXHiyf1NXHvemrRI3Z8esufAEHbD3O8ekte4TeFM+bFU2J3fS1aabbTAt56AE+ZY72PXjcDkzr6We3EghVV9JTbU/SOAwr6AIxAzaQKOAwKnyq+lTcAjqU4F1f0k5lDwKScBEtYnMSVPHuKACkchgJOAwMnfBJwKjkH8MC09N+AkQML6U1OHAr4KEL9a4H0AhSMlc3pRNgFvBToeqY87KYmQZ+2agHcB4lgqYRVNwEWATB0L9bnV7Xj8Uv73kk+HapHHDYcP6l4cDhNdll4JDOC015QJqbtum4ef1f9nuRYYpC+EsrUYLDCVXZXWk0ACWdCT9z33P9RfaDxbguS18TBlvF9TqL1+uicSeVB3ZgqMsJx7xKjkpdKfE3P3h/2M6+6sraUplhfMrlV2FAY5Y3+zJlitwhWlXQ7Dq2ZyC4BL5dZD8a7V0o3iuf5XKhnD/HBnvR6GJ4WxN2EYsImXjBge6kTnysbrYTpJd4U2OZH85hvWeAOAAXraUUq63CXBsV3qrjhYAdegbSsxhKpfPptSorKtqwtS1riAsbl6GJGLzlVYw6nuu+Rt2lSFuWBaUCbekuf1+rD1Jh4WJ3S6PlMy+2F7miZdwopl1xIrpBO4j12TFUGOOdbrnD8BqM6nmIyuLRcgJT24tTL43UOInwCYFB2jSnaOKysjdNO3Smzu+4aHOPC/Zmf3Q63fAgwAEi5BBPL3/lYAAAAASUVORK5CYII=") no-repeat center top;
+  padding-top: 100px;
+}
+#container > h1 {
+  margin: 0;
+  text-align: center;
+  font-family: "XFINITY Sans TT Lgt", "Helvetica Neue", FreeSans, Arimo, "Droid Sans", Helvetica, Arial, sans-serif;
+  font-weight: 100;
+  font-size: 42px;
+  color: white;
+}
+
+        </style>
+
+    </head>
+    <body>
+
+        <div id="container">
+            <h1>
+
+                Server cannot be reached.<br>
+                Please check your Internet connection or try again later.
+
+            </h1>
+        </div>
+
+        <script>
+            if('localhost' === location.hostname) {
+                document.write('<script src="//localhost:35729/livereload.js"><\/script>');
+            }
+        </script>
+
+    </body>
+</html>
